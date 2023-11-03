@@ -1,3 +1,19 @@
-<nz-header class="h-[100px] bg-white flex items-center">
-  TEST
+<nz-header class="h-[100px] bg-white flex items-center justify-end">
+  <div class="end-container flex items-center justify-end gap-4">
+    <div class="search-input flex items-center">
+      <nz-input-group [nzPrefix]="prefixIconSearch" class="h-12 rounded-full bg-slate-100 border-none">
+        <input class="bg-slate-100" type="text" nz-input placeholder="Search..." />
+      </nz-input-group>
+      <ng-template #prefixIconSearch>
+        <span class="px-2" nz-icon nzType="search"></span>
+      </ng-template>
+    </div>
+    <div class="avatar">
+      <nz-avatar
+        class="flex items-center justify-center"
+        nzSize="large"
+        nzIcon="user"
+      ></nz-avatar>
+    </div>
+  </div>
 </nz-header>
